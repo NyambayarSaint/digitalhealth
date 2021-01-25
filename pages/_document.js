@@ -15,6 +15,8 @@ class MyDocument extends Document {
                 <body style={{background: '#b2b2b2'}}>
                     <Main/>
                     <NextScript/>
+
+                    
                 </body>
             </Html>
         )

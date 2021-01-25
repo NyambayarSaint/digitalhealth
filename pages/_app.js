@@ -18,6 +18,8 @@ class MyApp extends App {
         serverUrl:'https://digitalhealthmongolia.herokuapp.com',
         frontUrl: 'http://localhost'
     };
+
+    
     async componentDidMount() {
         const res = await checkLanguage(queryString, null);
         const config = {width: window.innerWidth, height: window.innerHeight};

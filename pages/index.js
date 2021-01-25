@@ -15,8 +15,11 @@ const Index = ({data}) => {
     return (
         <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <Root>
+
                 {loaded && <ResolveComponent data={Layout}/>}
+                
             </Root>
+
         </motion.div>
     );
     
