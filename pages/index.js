@@ -17,6 +17,7 @@ const Index = ({data}) => {
             <Root>
 
                 {loaded && <ResolveComponent data={Layout}/>}
+
                 
             </Root>
 
