@@ -91,6 +91,7 @@ const Container = styled.div`
         align-items: center;
         color: white;
         padding:15px;
+        background-attachment: fixed;
     }
     h1 {
         font-size: 50px;

@@ -12,7 +12,8 @@ const ResolveComponent = ({data}) => {
         async function loadViews(){
             const componentPromises = data.map(async (el,i) => {
                 const Comp = await importComponent(sanitizeComponentName(el.__component));
-                return i === 0 ? <Comp data={el} key={Math.random()}/> : <ScrollAnimation key={Math.random()} animateIn='fadeInUp'><Comp data={el}/></ScrollAnimation>
+                // return i === 0 ? <Comp data={el} key={Math.random()}/> : <ScrollAnimation key={Math.random()} animateIn='fadeInUp'><Comp data={el}/></ScrollAnimation>
+                return <Comp data={el} key={Math.random()}/>
             });
             Promise.all(componentPromises).then(setViews);
         }

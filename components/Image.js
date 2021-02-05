@@ -3,18 +3,20 @@ import styled from 'styled-components';
 import minimize from './miscs/minimize';
 
 const Image = ({data}) => {
-    console.log(data.Image.caption,'hehe')
+
+    const img = React.useRef();
+    const [height, setHeight] = React.useState(0);
+    console.log(height,'yey')
+    React.useEffect(()=>{
+        setTimeout(() => {
+            setHeight(img.current.offsetHeight);
+        }, 1000);
+    },[]);
+
     return (
-        <Container
-        center={data.Position === "center"}
-        left={data.Position === "left"}
-        right={data.Position === "right"}
-        ghost={data.Ghost}
-        >
-            {data.Image.caption ?
-                <a href={data.Image.caption} target="__blank"><img style={{ width: data.Width }} src={minimize(data.Image)} /></a>:
-                <img style={{ width: data.Width }} src={minimize(data.Image)} />
-            }
+        <Container height={height}>
+            <img ref={img} src={minimize(data.Image)}/>
+            <div className="image" style={{backgroundImage: `url(${minimize(data.Image)})`}}></div>
         </Container>
     );
 };
@@ -22,23 +24,17 @@ const Image = ({data}) => {
 export default Image;
 
 const Container = styled.div `
-    width:100%;
-    position:relative;
-    z-index:1;
-    ${({center}) => center && `
-        display:flex;
-        justify-content:center;
+    ${({height}) => height && `
+    img{
+        display:none;
+    }
     `};
-    ${({left}) => left && `
-        display:flex;
-        justify-content:flex-start;
-    `};
-    ${({right}) => right && `
-        display:flex;
-        justify-content:flex-end;
-    `};
-    ${({ghost}) => ghost && `
-        position:absolute;
-        z-index:2;
-    `};
+    .image{
+        width:100%;
+        height: ${({height}) => height && height + 'px'};
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
 `

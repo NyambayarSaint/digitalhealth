@@ -8,11 +8,11 @@ import PreSeo from "@/components/miscs/PreSeo";
 export default function Root(props) {
     const {menu} = useContext(MenuContext);
     return (
-        <Body>
+        <Body className="Root">
             <PreSeo seo={props.seo}/>
             {menu.Menu && <Header menu={menu || []}/>}
             {props.children}
-            {menu.Menu && <Footer menu={menu || []}/>}
+            {/* {menu.Menu && <Footer menu={menu || []}/>} */}
         </Body>
     )
 }

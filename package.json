@@ -27,6 +27,7 @@
     "react-icons": "^3.11.0",
     "react-share": "^4.3.0",
     "react-sublime-video": "^0.2.5",
+    "react-text-transition": "^1.2.1",
     "styled-components": "^5.1.1"
   },
   "alias": {

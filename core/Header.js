@@ -4,13 +4,33 @@ import styled from 'styled-components';
 import HamburgerMenu from 'react-hamburger-menu'
 import { AnimatePresence, motion } from 'framer-motion';
 import { useRef } from 'react';
+import { useEffect } from 'react';
 
 const Header = () => {
     const { menu } = useContext(MenuContext);
-    console.log(menu, 'hehe');
     const [open, setOpen] = useState(false);
     const outside = useRef();
     const handleOutsideClick = (e) => e.target === outside.current && setOpen(false);
+    let components = [];
+    const handleScroll = () => {
+        let current = document.documentElement.scrollTop
+
+        components.map((el)=>{
+            let top = el.offsetTop
+            let bottom = el.offsetTop + el.offsetHeight
+            // if(top > current && bottom > current) console.log(el)
+        })
+        // console.log(components)
+    }
+
+    useEffect(()=>{
+        document.addEventListener('scroll', handleScroll);
+        let elem = document.querySelector('.Root');
+        let arr = Array.from(elem.childNodes); //CONVERT Nodelist to array
+        arr = arr.splice(1,arr.length-2); //Remove header and footer
+        components = arr
+    },[])
+
     return (
         <Container>
             <img className="logo" src="/img/logo.png" />
