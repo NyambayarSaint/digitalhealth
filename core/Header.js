@@ -35,7 +35,7 @@ const Header = () => {
         <>
         <div style={{height:110}}></div>
         <Container>
-            <img className="logo" src="/img/logo.png" />
+            <img className="logo" src="/img/logo3.png" />
 
             <AnimatePresence>
                 {open && <motion.div animate={{ opacity: 1}} initial={{ opacity: 0}} exit={{ opacity: 0}}>
@@ -83,8 +83,10 @@ const Container = styled.div`
     display:flex;
     align-items:center;
     justify-content:space-between;
-    background:white;
+    ${'' /* background:white; */}
     box-shadow:rgb(0 0 0 / 10%) 0px 2px 4px;
+    background:${({ theme }) => theme.mainColor};
+    background-image:linear-gradient(to right, ${({ theme }) => theme.mainColor2}, ${({ theme }) => theme.mainColor}, ${({ theme }) => theme.mainColor2}, ${({ theme }) => theme.mainColor});
 
     .logo{
         height:50px;
