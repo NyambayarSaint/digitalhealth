@@ -32,6 +32,7 @@ const Body = styled.div `
     }
     img{
         max-width:100%;
+        object-fit:contain;
     }
     .rec-carousel-item{
         display:flex;
