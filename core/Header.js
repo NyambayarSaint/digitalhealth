@@ -32,6 +32,8 @@ const Header = () => {
     },[])
 
     return (
+        <>
+        <div style={{height:110}}></div>
         <Container>
             <img className="logo" src="/img/logo.png" />
 
@@ -65,6 +67,7 @@ const Header = () => {
             />
 
         </Container>
+        </>
     );
 };
 
@@ -80,7 +83,9 @@ const Container = styled.div`
     display:flex;
     align-items:center;
     justify-content:space-between;
-    background:${({ theme }) => theme.mainColor};
+    background:white;
+    box-shadow:rgb(0 0 0 / 10%) 0px 2px 4px;
+
     .logo{
         height:50px;
         &:hover{
@@ -88,6 +93,7 @@ const Container = styled.div`
         }
     }
     .burger{
+        display:none;
         &:hover{
             cursor:pointer;
         }

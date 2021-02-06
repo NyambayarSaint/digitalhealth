@@ -47,4 +47,29 @@ const Container = styled.div`
             font-size:18px;
         }
     }
+    @media only screen and (max-width: 768px){
+        padding:30px 15px;
+        h1{
+            position:relative;
+            top:unset;
+            right:unset;
+            font-size: 40px;
+        }
+        .box{
+            flex-direction:column;
+            gap:15px;
+            justify-content:flex-start;
+            align-items:flex-start;
+            h2{
+                font-size: 20px;
+                width:100%;
+                text-align:right;
+            }
+            .border{
+                width:100%;
+                padding:15px;
+                font-size: 16px;
+            }
+        }
+    }
 `

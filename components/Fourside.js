@@ -66,4 +66,18 @@ const Container = styled.div`
     .right{
         width:50%;
     }
+    @media only screen and (max-width: 768px){
+        padding:0px;
+        flex-direction:column-reverse;
+        .box{
+            padding:0px 15px 30px;
+            h1{
+                font-size:40px;
+            }
+        }
+        .right{
+            width:100%;
+            margin-bottom:15px;
+        }
+    }
 `

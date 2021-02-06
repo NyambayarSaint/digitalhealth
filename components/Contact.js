@@ -53,10 +53,28 @@ const Container = styled.div`
             .entry{
                 margin-bottom:15px;
                 text-align:center;
+                &:last-child{margin-bottom:0px;}
                 svg{
                     margin-right:5px;
                     font-size: 20px;
                     opacity:0.7;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 768px){
+        padding:50px 15px;
+        .box{
+            h1{
+                margin-top:-15px;
+                font-size: 40px;
+                opacity:0.3;
+            }
+            .info{
+                margin-top:-30px;
+                padding:25px;
+                .entry{
+                    font-size: 16px;
                 }
             }
         }

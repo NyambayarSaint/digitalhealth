@@ -37,4 +37,13 @@ const Container = styled.div `
         background-attachment: fixed;
         background-position: center;
     }
+    @media only screen and (max-width: 768px){
+        height:auto !important;
+        img{
+            display:block;
+        }
+        .image{
+            display:none;
+        }
+    }
 `

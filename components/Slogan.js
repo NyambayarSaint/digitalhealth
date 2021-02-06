@@ -39,4 +39,14 @@ const Container = styled.div`
         text-align:center;
         font-weight:bold;
     }
+    @media only screen and (max-width: 768px){
+        padding:30px 15px;
+        h1{
+            font-size: 20px;
+            flex-direction:column;
+            .text-transition{
+                margin:auto !important;
+            }
+        }
+    }
 `

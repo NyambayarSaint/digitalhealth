@@ -34,4 +34,19 @@ const Container = styled.div`
             font-weight:bold;
         }
     }
+    @media only screen and (max-width: 768px){
+        padding:30px 15px;
+        .text{
+            span{
+                font-size: 20px;
+                line-height:20px;
+            }
+        }
+        .caption{
+            font-size: 40px;
+            line-height:40px;
+            text-align:right;
+            margin-top:-20px;
+        }
+    }
 `
