@@ -15,7 +15,7 @@ class MyApp extends App {
         completelyLoaded: false,
         name: 'Digital Health',
         description: 'We will bring the future of healthcare.',
-        serverUrl:'http://localhost:1400',
+        serverUrl:'http://digitalmongolia.herokuapp.com',
         frontUrl: 'https://digital-healthcare.mn'
     };
 
