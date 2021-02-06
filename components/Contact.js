@@ -1,20 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 import minimize from './miscs/minimize';
-import {FaGlobeAsia, FaMapMarkerAlt, FaPhone, FaEnvelope} from 'react-icons/fa'
+import { FaGlobeAsia, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa'
+import ScrollAnimation from 'react-animate-on-scroll'
 
-const Contact = ({data}) => {
-    
+const Contact = ({ data }) => {
+
     return (
-        <Container style={{backgroundImage: data.Background && `url(${minimize(data.Background)})`}}>
+        <Container style={{ backgroundImage: data.Background && `url(${minimize(data.Background)})` }}>
             <div className="box">
-                <h1>{data.Title}</h1>
-                <div className="info">
-                    <div className="entry"><FaGlobeAsia/> {data.Location}</div>
-                    <div className="entry"><FaMapMarkerAlt/> {data.Address}</div>
-                    <div className="entry"><FaPhone/> {data.Phone}</div>
-                    <div className="entry"><FaEnvelope/> {data.Email}</div>
-                </div>
+                <ScrollAnimation key={Math.random()} animateIn='fadeInDown'>
+                    <h1>{data.Title}</h1>
+                </ScrollAnimation>
+                <ScrollAnimation key={Math.random()} animateIn='fadeInUp'>
+                    <div className="info">
+                        <div className="entry"><FaGlobeAsia /> {data.Location}</div>
+                        <div className="entry"><FaMapMarkerAlt /> {data.Address}</div>
+                        <div className="entry"><FaPhone /> {data.Phone}</div>
+                        <div className="entry"><FaEnvelope /> {data.Email}</div>
+                    </div>
+                </ScrollAnimation>
             </div>
         </Container>
     );
@@ -22,9 +27,9 @@ const Contact = ({data}) => {
 
 export default Contact;
 
-const Container = styled.div `
+const Container = styled.div`
     width:100%;
-    height:100vh;
+    padding:150px 0px;
     background-size: cover;
     background-position:center center;
     display:flex;
@@ -39,6 +44,7 @@ const Container = styled.div `
             font-weight:bold;
             margin-bottom:50px;
             text-align:center;
+            font-size:50px;
         }
         .info{
             padding:50px;
