@@ -38,13 +38,13 @@ const Container = styled.div`
         display:flex;
         flex-direction:column;
         justify-content:center;
-        gap:30px;
         h1{
             font-weight:bold;
             opacity:0.3;
             font-size:50px;
             ${'' /* position:absolute; */}
             top:30px;
+            margin-bottom:20px;
         }
         .info{
             font-size:20px;
@@ -52,9 +52,9 @@ const Container = styled.div`
             line-height:20px;
         }
         .list{
+            margin-top:30px;
             li{
                 list-style-type:none;
-                font-weight:bold;
                 opacity:0.8;
                 margin-bottom:15px;
                 &:last-child{
