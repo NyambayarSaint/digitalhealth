@@ -33,7 +33,7 @@ const Header = () => {
 
     return (
         <>
-        <div style={{height:110}}></div>
+        <Hatuulga></Hatuulga>
         <Container>
             <img className="logo" src="/img/logo3.png" />
 
@@ -72,6 +72,13 @@ const Header = () => {
 };
 
 export default Header;
+
+const Hatuulga = styled.div `
+    height:110px;
+    @media only screen and (max-width: 768px){
+        height:80px;
+    }
+`
 
 const Container = styled.div`
     position:fixed;
@@ -156,6 +163,7 @@ const Container = styled.div`
         }
     }
     @media only screen and (max-width: 768px){
+        padding:15px 30px;
         .popup{
             img{
                 object-fit:contain;

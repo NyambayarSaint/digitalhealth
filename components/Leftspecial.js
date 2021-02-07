@@ -82,7 +82,6 @@ const Container = styled.div`
         display:none;
     }
     @media only screen and (max-width: 768px){
-        max-height:375px;
         .con{
             .box{
                 width:100%;
