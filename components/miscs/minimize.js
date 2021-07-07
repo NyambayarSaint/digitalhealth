@@ -2,7 +2,7 @@ import {MenuContext} from '@/miscs/ContextMenuProvider'
 import { useContext } from 'react';
 
 const placeholder = '/img/placeholder.jpg'
-const path = `https://digitalhealthmongolia.herokuapp.com`;
+const path = `https://digitalhealth-admin.herokuapp.com`;
 
 const minimize = (obj, quality) => {
 
